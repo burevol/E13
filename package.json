@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "test": "npx eslint && npx stylelint ./*.css",
+    "build:prod": "webpack --env production",
+    "build:dev": "webpack --env development",
+    "serve": "webpack-dev-server --open",
     "prepare": "husky install"
   },
   "author": "",
